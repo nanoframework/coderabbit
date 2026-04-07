@@ -1,0 +1,2 @@
+# coderabbit
+Coderabbitai config repository
