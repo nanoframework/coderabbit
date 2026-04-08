@@ -1,15 +1,42 @@
 # yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
 reviews:
   in_progress_fortune: false
-  profile: chill
+  profile: assertive
   request_changes_workflow: true
   high_level_summary: true
+  high_level_summary_in_walkthrough: true
   poem: false
   review_status: true
   auto_review:
     enabled: true
     drafts: true
     ignore_usernames: [nfbot]
+  labeling_instructions: [
+    {
+      label: "Type: enhancement",
+      instructions: "Apply when PR includes non-breaking changes that improves a feature, code or algorithm or adds functionality to code. Do not apply to changes related with configuration, pipeline and build system, that have no impact on code or features."
+    },
+    {
+      label: "Type: dependencies",
+      instructions: "Apply when PR update dependencies and changes associated with, has no impact on code or features."
+    },
+    {
+      label: "Type: bug",
+      instructions: "Apply when PR includes non-breaking change which fixes an issue with code or algorithm. Do not apply to changes related with configuration, pipeline and build system, that have no impact on code or features."
+    },
+    {
+      label: "Type: Unit Tests",
+      instructions: "Apply when PR adds new Unit Tests or improves existing ones."
+    },
+    {
+      label: "Type: documentation",
+      instructions: "Apply when PR includes changes or updates related with documentation: repository README files, docs or instructions. Also applicable in .cs files if there are changes in the InstelliSense comments."
+    },
+    {
+      label: "Area: Config-and-Build",
+      instructions: "Apply when PR includes changes related to the configuration, pipeline and build system, has no impact on code or features"
+    }
+  ]
   pre_merge_checks:
     title:
       mode: warning
