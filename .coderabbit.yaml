@@ -41,5 +41,10 @@ reviews:
     title:
       mode: warning
       requirements: "Title should be concise and descriptive with a general, short summary of the changes, ideally under 50 characters. No references to other PR or issues. Can't end with a full stop."
+  finishing_touches:
+    docstrings:
+      enabled: false
+    unit_tests:
+      enabled: false
 chat:
   art: false
