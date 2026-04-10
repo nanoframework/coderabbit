@@ -37,7 +37,7 @@ reviews:
       instructions: "Apply when PR includes changes related to the configuration, pipeline and build system, has no impact on code or features"
     }
   ]
-  auto_apply_labels: true
+  auto_apply_labels: false
   pre_merge_checks:
     title:
       mode: error
